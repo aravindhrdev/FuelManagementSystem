@@ -7,7 +7,7 @@ const ftrans = express.Router();
 
 ftrans.get('/', async (req, res) => {
   try {
-    const transactions = await FuelTransaction.find().sort({ date: -1 }).limit(10);
+    const transactions = await FuelTransaction.find().sort({ transactionDate: -1 }).limit(10);
     res.json(transactions);
   } catch (error) {
     console.error('Error fetching transactions:', error.message);
@@ -17,15 +17,19 @@ ftrans.get('/', async (req, res) => {
 
 ftrans.post('/', async (req, res) => {
   try {
-    
+    const now = new Date();
+    const tD = new Date(now.getTime());
+
     const transaction = new FuelTransaction(req.body);
+    transaction.transactionDate = tD; 
+
     await transaction.save();
 
     const io = getIO();
     io.emit("newTransaction", transaction);
     
     emitter.emit('newTransactionCreated', transaction);
-    console.log('Emitted internal newTransactionCreated event:', transaction);
+    console.log('Transaction Emitted',transaction);
 
     res.status(201).json(transaction);
   } catch (error) {

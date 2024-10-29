@@ -1,6 +1,6 @@
-**This Project is part of Academic Professional Training(PT-1) 5th Semester Paper.**  
+# This Project is part of Academic Professional Training(PT-1) 5th Semester Paper
 
-__NOTE:__  
+__NOTE:__
 1.The Project might have exceeded the limitation of 500 lines of code as total. But the Functionality Code in the backend including events,API route files and socket connections would fall under 500 lines.  
 
 2.Unavoidably to implement two features : 1.Real-Time Transaction monitoring and 2.Automated Stock Request and Monitoring , frontend plays key role in displaying the features, hence the implementation took extra lines.  

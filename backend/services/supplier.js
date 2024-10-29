@@ -2,11 +2,12 @@ import RestockRequest from '../models/restock.js';
 import { getIO } from '../socket.js';
 
 export const handleSupplierLogic = async (newRequest) => {
-  const io = getIO(); 
+
+  const io = getIO();
 
   try {
     setTimeout(async () => {
-      const expectedRefillDate = new Date();
+      const expectedRefillDate = new Date(); 
       expectedRefillDate.setDate(expectedRefillDate.getDate() + 2);
 
       const updatedRequest = await RestockRequest.findByIdAndUpdate(

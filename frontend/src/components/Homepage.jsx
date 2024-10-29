@@ -1,11 +1,10 @@
-// src/components/Home.js
 import React from 'react';
 
 const Home = () => {
     return (
         <div>
             <center>
-            <center><h2>Welcome to the Fuel Management System</h2></center>
+            <center><h2>Fuel Management System</h2></center>
             <p>
                 This application allows you to efficiently manage fuel stocks and track fuel transactions across different branches.
             </p>
@@ -17,13 +16,18 @@ const Home = () => {
             </ul>
             </center>
             <div>
-                <a href="/manage-fuel" style={{ padding: '10px', background: 'blue', color: 'white', borderRadius: '5px', textDecoration: 'none' }}>
+                <a href="/manage-fuel" style={{ padding: '10px', background: 'Red', color: 'white', borderRadius: '5px', textDecoration: 'none' }}>
                     Manage Fuel Stocks and Transactions
                 </a>
                 <br />
                 <br />
-                <a href="/restock-requests" style={{ padding: '10px', background: 'blue', color: 'white', borderRadius: '5px', textDecoration: 'none' }}>
+                <a href="/restock-requests" style={{ padding: '10px', background: 'Red', color: 'white', borderRadius: '5px', textDecoration: 'none' }}>
                     Restock Requests
+                </a>
+                <br/>
+                <br/>
+                <a href="/download-metrics" style={{ padding: '10px', background: 'Red', color: 'white', borderRadius: '5px', textDecoration: 'none' }}>
+                    Download Metrics
                 </a>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { handleSupplierLogic } from '../routes/supplier.js'; 
+import { handleSupplierLogic } from './supplier.js'; 
 import emitter from '../events/emitter.js';
 
 export const handleRestockRequest = () => {

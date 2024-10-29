@@ -19,11 +19,12 @@ const transactionSchema = new Schema({
       required: true,
   },
   transactionDate: {
-      type: Date,
-      default: Date.now,
+    type: Date,
+    required: true,
   },
   payment_method: {
     type: String,
+    enum: ['cash','card','upi'],
     required: true,
   },
   total_amount: {

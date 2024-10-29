@@ -27,6 +27,7 @@ const ManageFuelStocks = () => {
         };
 
         if (socket) { 
+            console.log('Updatestock socket is connected successfully');
             socket.on('UpdatedStock', handleStockUpdate);
         }
 
@@ -39,11 +40,12 @@ const ManageFuelStocks = () => {
         };
     }, [socket]);
 
-    const sortedStocks = stocks.toSorted((a, b) => a.branch_id - b.branch_id);
+    const sortedStocks = [...stocks].sort((a, b) => a.branch_id.localeCompare(b.branch_id));
 
     return (
         <div>
             <h3>Fuel Stocks</h3>
+            <center>Minimum Threshold Quantity(For all Types-100)</center>
             {stocks.length === 0 ? (
                 <div>Loading or No stocks available.</div>
             ) : (
@@ -55,7 +57,7 @@ const ManageFuelStocks = () => {
                             <th>Location</th>
                             <th>Petrol (liters)</th>
                             <th>Diesel (liters)</th>
-                            <th>CNG (liters)</th>
+                            <th>CNG (kg)</th>
                         </tr>
                     </thead>
                     <tbody>

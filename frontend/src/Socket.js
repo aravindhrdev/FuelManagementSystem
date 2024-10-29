@@ -22,7 +22,7 @@ export const SocketProvider = ({ children }) => {
         </SocketContext.Provider>
     );
 };
-// Define prop types
+
 SocketProvider.propTypes = {
     children: PropTypes.node.isRequired,
 };

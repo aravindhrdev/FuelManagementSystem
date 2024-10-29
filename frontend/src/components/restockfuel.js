@@ -41,13 +41,28 @@ const RestockRequests = () => {
       }
     };
   }, [socket]);
-
+  const styles = {
+    olist:{
+        display:"flex",
+        flexDirection : "row",
+        justifyContent: "space-around",
+        margin : "auto",
+        border:5,
+        listStyleType : 'None',
+        flexWrap: 'wrap',
+    },
+    ilist:{
+        textAlign:"justify",
+        padding: 2,
+        Backgroundcolor:'Blue'
+    }
+  }
   return (
     <div>
       <h2>Restock Requests</h2>
-      <ul>
+      <ul style={styles.olist}>
         {requests.map((request) => (
-          <li key={request._id}>
+          <li key={request._id} style={styles.ilist}>
             <p><strong>Branch ID:</strong> {request.branch_id}</p>
             <p><strong>Fuel Type:</strong> {request.fuelType}</p>
             <p><strong>Requested Quantity:</strong> {request.requested_quantity}</p>
