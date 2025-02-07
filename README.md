@@ -1,4 +1,4 @@
-# This Project is part of Academic Professional Training(PT-1) 5th Semester Paper
+# This Project is part of Academic Professional Training(PT) 5th Semester Paper
 
 __NOTE:__
 1.The Project might have exceeded the limitation of 500 lines of code as total. But the Functionality Code in the backend including events,API route files and socket connections would fall under 500 lines.  
